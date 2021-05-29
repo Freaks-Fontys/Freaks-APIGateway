@@ -41,16 +41,14 @@ namespace API_Gateway
 
                 };
             });
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy(name: "dev",
-            //        builder =>
-            //        {
-            //            builder.WithOrigins("http://localhost:4200").AllowAnyMethod();
-            //        });
-            //});
-
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "dev",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200").AllowAnyMethod();
+                    });
+            });
             services.AddOcelot();
         }
 
@@ -63,14 +61,17 @@ namespace API_Gateway
             }
 
             app.UseRouting();
+            app.UseAuthentication();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
 
+            });
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true)
+                .AllowCredentials());
             app.UseOcelot().Wait();
         }
     }
