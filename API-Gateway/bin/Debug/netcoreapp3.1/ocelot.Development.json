@@ -11,6 +11,42 @@
       ],
       "UpstreamPathTemplate": "/api/Post",
       "UpstreamHttpMethod": [ "Get", "Post", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44371"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Login",
+      "UpstreamHttpMethod": [ "Post", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44371"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Register",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44347"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     }
   ],
   "GlobalConfiguration": {
