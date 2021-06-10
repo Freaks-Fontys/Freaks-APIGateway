@@ -1,0 +1,31 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authservice",
+          "Port": "6001"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Login",
+      "UpstreamHttpMethod": [ "Post", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authservice",
+          "Port": "6001"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Register",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://api.freaks.nl:6011"
+  }
+}
