@@ -5,7 +5,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "authservice.freaks.nl",
+          "Host": "authservice",
           "Port": "6001"
         }
       ],
@@ -17,7 +17,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "authservice.freaks.nl",
+          "Host": "authservice",
           "Port": "6001"
         }
       ],
