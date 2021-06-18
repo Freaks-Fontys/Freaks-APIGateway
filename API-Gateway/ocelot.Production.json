@@ -35,7 +35,7 @@
       ],
       "UpstreamPathTemplate": "/api/Post",
       "UpstreamHttpMethod": [ "Get", "Post", "Delete" ]
-    }
+    },
     {
       "DownstreamPathTemplate": "/api/User",
       "DownstreamScheme": "http",
