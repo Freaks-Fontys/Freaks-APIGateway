@@ -50,6 +50,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://api.freaks.nl:6011"
+    "BaseUrl": "http://api.freaks.nl"
   }
 }
